@@ -20,9 +20,9 @@ const Header = () => {
               </button>
               <ul className={`md:flex font-bold  w-full justify-end items-center absolute md:static ${open ? 'top-6': 'top-[-120px]'}`}>
                <CustomLink className='mr-2 p-3 ' to="">Home</CustomLink>
-            <CustomLink className='mr-2 p-3' to="Huku">Chart</CustomLink>
+            
             <CustomLink className='mr-2 p-3' to="about">About me</CustomLink>
-            <CustomLink className='mr-2 p-3' to="post">Post</CustomLink>
+            <CustomLink className='mr-2 p-3' to="blogs">Blogs</CustomLink>
             {user? <button onClick={()=> signOut(auth)} className='mr-2 p-2 font-bold'>sign out</button> : <CustomLink className='mr-2 p-3' to="login">Login</CustomLink>}
 
          </ul>

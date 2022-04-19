@@ -11,6 +11,7 @@ import About from './components/About/About';
 import { createContext, useState } from 'react';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import Checkout from './components/Checkout/Checkout';
+import Blogs from './components/Blogs/Blogs';
 
 export const OrderContext=createContext()
 function App() {
@@ -27,6 +28,7 @@ function App() {
     <Route path='/login' element={<Login/>}></Route>
    <Route path='/signup' element={<SignUp/>}></Route>
    <Route path='about' element={<About/>}></Route>
+   <Route path='/blogs' element={<Blogs/>}></Route>
    <Route path='/checkout' element={
      <RequireAuth>
        <Checkout order={order}></Checkout>
