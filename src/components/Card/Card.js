@@ -11,7 +11,7 @@ const Card = ({service,setOrder}) => {
     return (
         <div>
             
-<div class="max-w-[400px] md:max-w-md lg:h-[480px] bg-red-700 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+<div class="max-w-[400px] md:max-w-md lg:h-[480px]  rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
 
 <img class="rounded-t-lg lg:h-[200px] w-full" src={img} alt=""/>
 
