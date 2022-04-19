@@ -27,7 +27,7 @@ const Header = () => {
 
          </ul>
          <div className='flex justify-end items-center  w-1/3 md:hidden'>
-         <nav onClick={()=> setOpen(!open)} className='w-12  bg-red-700 sm:mr-20 '>
+         <nav onClick={()=> setOpen(!open)} className='w-12   sm:mr-20 '>
            {open? <XIcon></XIcon>:<MenuIcon ></MenuIcon>} 
             </nav>
          </div>

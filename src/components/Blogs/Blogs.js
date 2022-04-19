@@ -12,13 +12,13 @@ const Blogs = () => {
                 </p>
             </div>
             <div  className='bg-slate-200 m-5 rounded-lg p-8'>
-                <h1  className='py-3 text-2xl' >Question: semantic ট্যাগ কি?</h1>
+                <h1  className='py-3 text-2xl' >Question: Why are you using firebase? What other options do you have to implement authentication??</h1>
                 <p>We use google firebase because it offers many featurse.We can add athentication easily by google firebase.it reduce our development time.Not only authentication we can save and use realtime data by google firebase.We can use it by no cost.
                     <br />
                     the  other options we have to implement authentication is Two-Factor Authentication (2FA) ...
 Single Sign-On (SSO) ...
 Multi-Factor Authentication (MFA) ...
-Password Authentication Protocol (PAP) etc
+Password Authentication Protocol (PAP) etc.
                 </p>
             </div>
         </div>
