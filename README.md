@@ -1,9 +1,10 @@
 # DOCTOR PORTFOLIO WEBSITE
 
-here live site :[CAMERA ANALYSIS](https://inspiring-raindrop-070fdf.netlify.app/)
+here live site : [DRs TASNIM ZARA](https://inspiring-raindrop-070fdf.netlify.app/)
 
 ##STEPS
-+ Its a analysis website of Camera
-+ In review page add some reviews about Camera
-+ In DashBoard page added 2 charts
++ This is Portfolio website of a doctor
++ In homepage added 5 section (header ,banner ,services,gallery and footer),
++ In booking now button add private route
++ In About page added some information about me
 + In Blog page Added two answer which Question give by jhankar sir
