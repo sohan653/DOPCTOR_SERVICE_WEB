@@ -1,8 +1,9 @@
 import React from 'react';
+import Gallery from '../Gallery/Gallery';
 import Services from '../Services/Services';
 const bannerimg='https://www.pngkey.com/png/detail/26-263538_transparent-geometric-pattern.png'
 const bannerFirstImg='https://img.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg?w=2000'
-const Banner = () => {
+const Banner = ({setOrder}) => {
     
     return (
         <>
@@ -20,7 +21,8 @@ const Banner = () => {
     </div>
   </div>
 </section>
-<Services></Services>
+<Services setOrder={setOrder}></Services>
+<Gallery></Gallery>
         </>
     );
 };

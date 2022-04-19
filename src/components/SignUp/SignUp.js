@@ -7,8 +7,9 @@ import auth from '../../firebase.init';
 
 const SignUp = () => {
    
-    const [createUserWithEmailAndPassword,user]=useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true})
-    const [signInWithGoogle, user2, loading, error2] = useSignInWithGoogle(auth);
+    const [createUserWithEmailAndPassword,user,loading]=useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true})
+    const [signInWithGoogle, user2, loading2, error2] = useSignInWithGoogle(auth);
+    
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
     const [confirmPassword,setConfirmPassword]=useState('');
@@ -26,12 +27,16 @@ const SignUp = () => {
             setError('password should be at least 6 character')
             return
         }
+        if(loading || loading2){
+            return <p>Loading...</p>;
+        }
     createUserWithEmailAndPassword(email,password)
    
 
     }
+   
     if(user || user2){
-        toast('please check your email')
+       
         navigate('/')
     }
     return (

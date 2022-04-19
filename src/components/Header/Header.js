@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { MenuIcon, XIcon } from '@heroicons/react/solid'
+import { signOut } from 'firebase/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import CustomLink from '../CustomLink/CustomLink';
 import logo from '../../images/logo-removebg-preview.png'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const Header = () => {
     const [open,setOpen]=useState(false);
     const navigate=useNavigate();
+    const [user, loading, error]=useAuthState(auth)
     return (
       
         <div className='relative'>
@@ -19,7 +23,7 @@ const Header = () => {
             <CustomLink className='mr-2 p-3' to="Huku">Chart</CustomLink>
             <CustomLink className='mr-2 p-3' to="about">About me</CustomLink>
             <CustomLink className='mr-2 p-3' to="post">Post</CustomLink>
-            <CustomLink className='mr-2 p-3' to="login">Login</CustomLink>
+            {user? <button onClick={()=> signOut(auth)} className='mr-2 p-2 font-bold'>sign out</button> : <CustomLink className='mr-2 p-3' to="login">Login</CustomLink>}
 
          </ul>
          <div className='flex justify-end items-center  w-1/3 md:hidden'>
