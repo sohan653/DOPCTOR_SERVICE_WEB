@@ -1,6 +1,6 @@
 # DOCTOR PORTFOLIO WEBSITE
 
-here live site : [DRs TASNIM ZARA](https://inspiring-raindrop-070fdf.netlify.app/)
+here live site : [DRs TASNIM ZARA](https://tangerine-piroshki-d2ee9f.netlify.app/)
 
 ##STEPS
 + This is Portfolio website of a doctor

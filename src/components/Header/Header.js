@@ -26,7 +26,7 @@ const Header = () => {
             {user? <button onClick={()=> signOut(auth)} className='mr-2 p-2 font-bold'>sign out</button> : <CustomLink className='mr-2 p-3' to="login">Login</CustomLink>}
 
          </ul>
-         <div className='flex justify-end items-center  w-1/3 md:hidden'>
+         <div className='flex justify-end items-center z-10  w-1/3 md:hidden'>
          <nav onClick={()=> setOpen(!open)} className='w-12   sm:mr-20 '>
            {open? <XIcon></XIcon>:<MenuIcon ></MenuIcon>} 
             </nav>
