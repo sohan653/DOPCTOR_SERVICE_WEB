@@ -1,5 +1,7 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { useSignInWithEmailAndPassword,useSignInWithGoogle,useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
+import { Helmet } from 'react-helmet-async';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -21,13 +23,19 @@ const Login = () => {
         error,
       ] = useSignInWithEmailAndPassword(auth);
     // sign in google
-    const [signInWithGoogle, user2, ]=useSignInWithGoogle(auth)
-    const handleLogin=(e)=>{
+    const [signInWithGoogle, user2 ]=useSignInWithGoogle(auth)
+    const handleLogin= async(e)=>{
         e.preventDefault()
-        signInWithEmailAndPassword(email,password)
+        signInWithEmailAndPassword(email,password);
+        const {data}=await axios.post('https://morning-chamber-80231.herokuapp.com/login',{email})
+        console.log(data.accessToken)
+        localStorage.setItem('token',data.accessToken)
+      
+
     }
     // password reset 
-    const [sendPasswordResetEmail, sending, error3]=useSendPasswordResetEmail(auth)
+    const [sendPasswordResetEmail]=useSendPasswordResetEmail(auth)
+
     if(user || user2){
         navigate(from,{replace:true})
     }
@@ -40,6 +48,9 @@ const Login = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>login</title>
+            </Helmet>
             <ToastContainer/>
              <div className='w-full h-[574px] mb-6  box-border'>
 
@@ -78,3 +89,6 @@ const Login = () => {
 };
 
 export default Login;
+
+
+

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, } from 'react-firebase-hooks/auth';
-import { ToastContainer, toast } from 'react-toastify';
+
 import auth from '../../firebase.init';
 
 
@@ -66,7 +66,7 @@ const SignUp = () => {
          
           
         </div>
-        <ToastContainer></ToastContainer>
+       
     </div>
     );
 };

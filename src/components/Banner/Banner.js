@@ -1,5 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Gallery from '../Gallery/Gallery';
+import Maps from '../Maps/Maps';
 import Services from '../Services/Services';
 const bannerimg='https://www.pngkey.com/png/detail/26-263538_transparent-geometric-pattern.png'
 const bannerFirstImg='https://img.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg?w=2000'
@@ -7,7 +9,10 @@ const Banner = ({setOrder}) => {
     
     return (
         <>
-        <section className="relative   h-[80vh] ">
+         <Helmet>
+                <title>Dr TASNIM</title>
+            </Helmet>
+        <section className="relative z-10  h-[80vh] ">
  
   <div className="md:absolute top-0 left-0 md:w-1/3 lg:w-2/5 h-full">
     <img className="h-32 hidden md:block md:h-full w-full md:w-auto" src={bannerFirstImg} alt=""/>
@@ -23,6 +28,7 @@ const Banner = ({setOrder}) => {
 </section>
 <Services setOrder={setOrder}></Services>
 <Gallery></Gallery>
+<Maps></Maps>
         </>
     );
 };

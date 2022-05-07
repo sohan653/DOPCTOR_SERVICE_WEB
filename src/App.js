@@ -12,6 +12,10 @@ import { createContext, useState } from 'react';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import Checkout from './components/Checkout/Checkout';
 import Blogs from './components/Blogs/Blogs';
+import SetService from './components/SetService/SetService';
+import Manage from './components/Header/Manage/Manage';
+import Order from './components/Order/Order';
+
 
 export const OrderContext=createContext()
 function App() {
@@ -29,11 +33,31 @@ function App() {
    <Route path='/signup' element={<SignUp/>}></Route>
    <Route path='about' element={<About/>}></Route>
    <Route path='/blogs' element={<Blogs/>}></Route>
-   <Route path='/checkout' element={
+   <Route path='/:id' element={
      <RequireAuth>
        <Checkout order={order}></Checkout>
      </RequireAuth>
    }></Route>
+  <Route path='/add' element={
+    <RequireAuth>
+      <SetService></SetService>
+    </RequireAuth>
+  }></Route>
+  <Route path='/manage' element={
+    <RequireAuth>
+      <Manage></Manage>
+    </RequireAuth>
+  }>
+
+  </Route>
+
+  <Route path='/order' element={
+    <RequireAuth>
+      <Order></Order>
+    </RequireAuth>
+  }>
+
+  </Route>
     <Route path='*' element={<NotFound/>}></Route>
   </Routes>
   <Footer></Footer>
